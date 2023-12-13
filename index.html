@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- ------------------------- -->
+    <!-- navbar -->
+    <!-- ------------------------- -->
+    <nav class="navbar navbar-transparent">
+      <div>
+        <img class="logo" src="./images/logo.png" alt="logo" />
+        <img class="logo-text" src="./images/logo-text.png" alt="logo" />
+      </div>
+      <div class="links">
+        <a href="#">01. History</a>
+        <a href="#">02. Team</a>
+      </div>
+    </nav>
+
+    <!-- ------------------------- -->
+    <!-- landing -->
+    <!-- ------------------------- -->
+    <section class="landing"></section>
+
+    <!-- ------------------------- -->
+    <!-- history -->
+    <!-- ------------------------- -->
+    <section class="history">
+      <div>
+        <h2>01.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          iusto, iste officia reprehenderit voluptas asperiores dicta minus
+          beatae consectetur quam ratione porro enim harum similique unde
+          laudantium id aliquid eligendi laboriosam est recusandae ipsa? Debitis
+          accusamus fuga dignissimos maxime! Quas sit aspernatur numquam modi a
+          neque ipsa, vitae tenetur minus?
+        </p>
+      </div>
+
+      <div class="carousel">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./images/thumb1.png" alt="history" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/thumb2.png" alt="history" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/thumb1.png" alt="history" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/thumb2.png" alt="history" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/thumb2.png" alt="history" />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------- -->
+    <!-- team  -->
+    <!-- ------------------------- -->
+    <div class="team">
+      <div class="text">
+        <h2>02.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          iusto, iste officia reprehenderit voluptas asperiores dicta minus
+          beatae consectetur quam ratione porro enim harum similique
+        </p>
+      </div>
+    </div>
+
+    <section class="tabs tabs-section">
+      <div class="tab-header">
+        <div class="tab active" data-target="#mountainOne">mountain 1</div>
+        <div class="tab" data-target="#mountainTwo">mountain 2</div>
+      </div>
+      <div class="tab-body active" id="mountainOne">
+        <div class="schedule">
+          <h3>Schedule</h3>
+          <div>
+            <p>25 Nov 2016</p>
+            <p>Vestibulum viverra</p>
+          </div>
+          <div>
+            <p>25 Nov 2016</p>
+            <p>Vestibulum viverra</p>
+          </div>
+          <div>
+            <p>25 Nov 2016</p>
+            <p>Vestibulum viverra</p>
+          </div>
+          <div>
+            <p>25 Nov 2016</p>
+            <p>Vestibulum viverra</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-body" id="mountainTwo">
+        <div class="schedule">
+          <h3>Schedule</h3>
+          <div>
+            <p>15 Nov 2016</p>
+            <p>Vestibulum viverra</p>
+          </div>
+          <div>
+            <p>28 Nov 2016</p>
+            <p>Vestibulum viverra</p>
+          </div>
+          <div>
+            <p>04 Dec 2017</p>
+            <p>Vestibulum viverra</p>
+          </div>
+          <div>
+            <p>11 Jan 2018</p>
+            <p>Vestibulum viverra</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------- -->
+    <!-- footer  -->
+    <!-- ------------------------- -->
+    <footer>
+      <img src="./images/logo-text-dark.png" alt="logo" />
+      <p>copyright 2016. all rights reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <script>
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        // console.log(e);
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        loop: true,
+
+        autoplay: { delay: 1000, effect: "fade" },
+
+        slidesPerView: 4,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
